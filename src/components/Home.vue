@@ -1,14 +1,19 @@
 <template>
-  <div class="bg-grey">
-    <h1 class="text-red">Olá. Se o backgound estiver cinza e esse H1 vermelho o Tailwind foi configurado com sucesso!</h1>
-  </div>
+  <main>
+    <Header/>
+  </main>
 </template>
 
 <script>
+import Header from './Header.vue'
+
 export default {
-  name: "HelloWorld",
+  name: "Home",
   props: {
     msg: String
+  },
+  components: {
+    Header
   }
 };
 </script>
