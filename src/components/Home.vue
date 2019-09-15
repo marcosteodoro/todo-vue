@@ -1,11 +1,13 @@
 <template>
   <main>
     <Header/>
+    <Button/>
   </main>
 </template>
 
 <script>
 import Header from './Header.vue'
+import Button from './Button.vue'
 
 export default {
   name: "Home",
@@ -13,7 +15,7 @@ export default {
     msg: String
   },
   components: {
-    Header
+    Header, Button
   }
 };
 </script>
