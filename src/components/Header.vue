@@ -1,5 +1,5 @@
 <template>
-  <header class="flex justify-between items-center border-b border-grey-light">
+  <header class="flex justify-between items-center border-b border-grey-light bg-grey-lightest">
     <div class="px-6">
       <h1 class="text-blue font-normal"><span class="font-bold">Friday,</span> 10th</h1>
       <p class="font-normal text-grey-dark">September</p>
