@@ -2,12 +2,14 @@
   <main>
     <Header/>
     <Button/>
+    <TodoList/>
   </main>
 </template>
 
 <script>
 import Header from './Header.vue'
 import Button from './Button.vue'
+import TodoList from './TodoList.vue'
 
 export default {
   name: "Home",
@@ -15,7 +17,7 @@ export default {
     msg: String
   },
   components: {
-    Header, Button
+    Header, Button, TodoList
   }
 };
 </script>
