@@ -1,4 +1,4 @@
-# Aplicação de ToDo com Vue.js
+# Aplicação de ToDo com Vue.js e TailwindCss
 
 ## Setup do projeto
 ```
@@ -14,4 +14,4 @@ npm run serve
 ```
 npm run build
 ```
-Me inspirei no seguinte [layout](https://dribbble.com/shots/2400033-ToDo-List-Day-042-dailui), e sigo tentando dar vida ao mesmo enquanto aprendo mais algumas coisas criando algo com Vue.js do zero! :blush: :heart_eyes: :kissing_heart:
+Me inspirei no seguinte [layout](https://dribbble.com/shots/2400033-ToDo-List-Day-042-dailui), e sigo tentando dar vida ao mesmo enquanto aprendo mais algumas coisas criando algo do zero com Vue.js, e deixando apresentável utilizando o TailwindCss! :blush: :heart_eyes: :kissing_heart:
