@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ul class="m-0 list-reset">
       <TodoItem/>
   </ul>
 </template>
