@@ -1,6 +1,6 @@
 <template>
   <main>
-    <Header/>
+    <Header :todoQuantity="todoQuantity"/>
     <Button/>
     <TodoList/>
   </main>
@@ -13,15 +13,22 @@ import TodoList from './TodoList.vue'
 
 export default {
   name: "Home",
-  props: {
-    msg: String
+  data: function () {
+    return {
+      'todoQuantity' : 0
+    }
   },
   components: {
     Header, Button, TodoList
+  },
+  computed: {
+
+  },
+  mounted() {
+    this.todoQuantity = document.querySelectorAll('.list-item').length;
   }
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 </style>

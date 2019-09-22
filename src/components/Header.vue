@@ -5,7 +5,7 @@
       <p class="font-normal text-grey-dark mt-0">September</p>
     </div>
     <div class="px-6">
-      <p class="text-grey-dark"><span class="font-bold">12</span> Tasks</p>
+      <p class="text-grey-dark"><span class="font-bold">{{ todoQuantity }}</span> Tasks</p>
     </div>
   </header>
 </template>
@@ -14,8 +14,7 @@
 
 export default {
   name: "Header",
-  props: {
-  }
+  props: ['todoQuantity']
 };
 </script>
 

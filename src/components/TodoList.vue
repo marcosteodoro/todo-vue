@@ -14,7 +14,7 @@ export default {
     },
     data: function () {
         return {
-            'todos' :[
+            'todos': [
                 {
                     'id': 1,
                     'description' : 'Task 1',
