@@ -3,8 +3,6 @@
     <Header/>
     <Button/>
     <TodoList/>
-    <TodoList/>
-    <TodoList/>
   </main>
 </template>
 
