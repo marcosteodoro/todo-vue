@@ -6,6 +6,7 @@
 
 <script>
 import TodoItem from './TodoItem.vue'
+import persistence from '../persistence'
 
 export default {
     name: 'TodoList',
@@ -14,31 +15,11 @@ export default {
     },
     data: function () {
         return {
-            'todos': [
-                {
-                    'id': 1,
-                    'description' : 'Task 1',
-                    'completed' : false
-                },
-                {
-                    'id': 2,
-                    'description' : 'Task 2',
-                    'completed' : true
-
-                },
-                {
-                    'id': 3,
-                    'description' : 'Task 3',
-                    'completed' : false
-                },
-                {   
-                    'id': 4,
-                    'description' : 'Task 4',
-                    'completed' : false
-                }
-            ]
-            
+            'todos': persistence.fetch()
         }
+    },
+    methods: {
+        
     }
 }
 </script>
