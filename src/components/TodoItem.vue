@@ -1,7 +1,9 @@
 <template>
   <li class="list-item border-b border-grey-lighter p-6">
-    <input type="checkbox" name="complete" id="complete" class="align-middle" @click="complete">
-    <span class="align-middle pl-4 text-grey-darker text-lg todo-description">{{ todo.description }}</span>
+    <input type="checkbox" name="complete" id="complete" class="align-middle" @click="complete" :checked="todo.completed">
+    <span class="align-middle pl-4 text-grey-darker text-lg todo-description"
+    :class="spanCompletedStyle"
+    >{{ todo.description }}</span>
   </li>
 </template>
 
@@ -9,6 +11,11 @@
 export default {
     name: "TodoItem",
     props: ['todo'],
+    computed: {
+      spanCompletedStyle() {
+        return this.todo.completed ? 'line-through text-grey' : '';
+      }
+    },
     methods: {
       complete: function (el) {
         const inputCompleted = el.target;
