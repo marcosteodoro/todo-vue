@@ -21,9 +21,6 @@ export default {
   components: {
     Header, Button, TodoList
   },
-  computed: {
-
-  },
   mounted() {
     this.todoQuantity = document.querySelectorAll('.list-item').length;
   }
