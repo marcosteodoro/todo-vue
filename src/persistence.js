@@ -9,5 +9,9 @@ export default {
         });
 
         return todos;
+    },
+    save(todos) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
+        return true;
     }
 }

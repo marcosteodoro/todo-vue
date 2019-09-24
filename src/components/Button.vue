@@ -14,7 +14,6 @@ import SweetAlert from "sweetalert2";
 export default {
   name: "Button",
   methods: {
-    save() {},
     async newTodo() {
       const inputValue = '';
 
@@ -33,7 +32,14 @@ export default {
       });
 
       if (description) {
-        SweetAlert.fire(`The description of your task is ${description}`);
+        let todos = persistence.fetch();
+        todos.push({
+          'description': description,
+          'completed': false
+        });
+
+        persistence.save(todos);
+        location.reload();
       }
     }
   }
