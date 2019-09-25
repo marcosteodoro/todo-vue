@@ -32,14 +32,21 @@ export default {
       });
 
       if (description) {
+        let newTodo = {
+          'description': description,
+          'completed': false
+        };
+        
         let todos = persistence.fetch();
+
         todos.push({
           'description': description,
           'completed': false
         });
 
         persistence.save(todos);
-        location.reload();
+
+        this.$emit('todoCreated', newTodo);
       }
     }
   }
