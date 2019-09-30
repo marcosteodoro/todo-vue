@@ -33,19 +33,16 @@ export default {
 
       if (description) {
         let newTodo = {
+          'id': todoId,
           'description': description,
           'completed': false
         };
         
         let todos = persistence.fetch();
+        let todoId = todos.length + 1;
 
-        todos.push({
-          'description': description,
-          'completed': false
-        });
-
+        todos.push(newTodo);
         persistence.save(todos);
-
         this.$emit('todoCreated', newTodo);
       }
     }
