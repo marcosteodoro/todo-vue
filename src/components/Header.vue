@@ -5,7 +5,7 @@
       <p class="font-normal text-grey-dark mt-0 mb-4">{{ month }}</p>
     </div>
     <div class="pr-6 mb-3">
-      <p class="text-grey-dark nowrap"><span class="font-bold">{{ todoQuantity }}</span> Tasks</p>
+      <p class="text-grey-dark nowrap"><span class="font-bold">{{ todoQuantity }}</span> {{ tasksPluralization }}</p>
     </div>
   </header>
 </template>
@@ -26,6 +26,9 @@ export default {
     },
     month() {
       return moment().format('MMMM')
+    },
+    tasksPluralization() {
+      return (this.todoQuantity == 1) ? 'Task' : 'Tasks';
     }
   }
 };
