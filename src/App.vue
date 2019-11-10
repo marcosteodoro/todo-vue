@@ -25,9 +25,6 @@ export default {
       todoQuantity: 0
     }
   },
-  components: {
-    Header, Button, TodoList
-  },
   methods: {
     updateTodoList(newTodo) {
       this.todos.push(newTodo);
