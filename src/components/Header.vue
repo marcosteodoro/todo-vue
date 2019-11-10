@@ -40,6 +40,7 @@ export default {
   }
 
   .nowrap {
+    word-wrap: no-wrap;
     -ms-word-wrap: no-wrap;
   }
 </style>
