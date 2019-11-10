@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import persistence from "../persistence";
-import SweetAlert from "sweetalert2";
+import persistence from "../persistence"
+import SweetAlert from "sweetalert2"
 
 export default {
   name: "Button",
