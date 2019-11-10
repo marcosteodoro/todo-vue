@@ -1,22 +1,44 @@
 <template>
-  <div id="app">
-    <Home msg="Bem vindo à sua To Do List"/>
-  </div>
+  <main>
+    <Header :todoQuantity="todoQuantity"/>
+    <Button @todoCreated="updateTodoList"/>
+    <TodoList :todos="todos"/>
+  </main>
 </template>
 
 <script>
-import Home from './components/Home.vue'
+import Header from '@/components/Header.vue'
+import Button from '@/components/Button.vue'
+import TodoList from '@/components/TodoList.vue'
+import persistence from '@/persistence'
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    Home
+    Header,
+    Button,
+    TodoList
+  },
+  data: function () {
+    return {
+      todos: persistence.fetch(),
+      todoQuantity: 0
+    }
+  },
+  components: {
+    Header, Button, TodoList
+  },
+  methods: {
+    updateTodoList(newTodo) {
+      this.todos.push(newTodo);
+      this.todoQuantity = this.todos.length;
+    }
+  },
+  mounted() {
+    this.todoQuantity = this.todos.length;
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Nunito';
-}
 </style>
