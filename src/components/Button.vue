@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import persistence from "../persistence"
+import persistence from "@/persistence"
 import SweetAlert from "sweetalert2"
 
 export default {
