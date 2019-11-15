@@ -2,6 +2,7 @@
   <main>
     <Header :todoQuantity="todoQuantity"/>
     <Button @todoCreated="updateTodoList"/>
+    <TodoFilter/>
     <TodoList :todos="todos"/>
   </main>
 </template>
@@ -9,6 +10,7 @@
 <script>
 import Header from '@/components/Header.vue'
 import Button from '@/components/Button.vue'
+import TodoFilter from '@/components/TodoFilter.vue'
 import TodoList from '@/components/TodoList.vue'
 import persistence from '@/persistence'
 
@@ -17,6 +19,7 @@ export default {
   components: {
     Header,
     Button,
+    TodoFilter,
     TodoList
   },
   data: function () {

@@ -1,6 +1,6 @@
 <template>
   <button
-    class="bg-pink text-white hover:bg-pink-dark border-0 cursor-pointer rounded-full h-16 w-16 flex items-center justify-center float-right mr-6 -mt-8"
+    class="button absolute bg-pink text-white hover:bg-pink-dark border-0 cursor-pointer rounded-full h-16 w-16 flex items-center justify-center float-right mr-6 -mt-8"
     @click="newTodo"
   >
     <i class="material-icons">add</i>
@@ -50,12 +50,16 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .swal2-popup {
   font-family: Nunito;
 }
 
 .swal2-confirm {
   background-color: #5d60ea !important;
+}
+
+.button {
+  right: 0;
 }
 </style>
