@@ -2,7 +2,7 @@
   <main>
     <Header :todoQuantity="todoQuantity"/>
     <Button @todoCreated="updateTodoList"/>
-    <TodoFilter/>
+    <TodoFilter :selectedFilter="selectedFilter"/>
     <TodoList :todos="todos"/>
   </main>
 </template>
@@ -25,7 +25,8 @@ export default {
   data: function () {
     return {
       todos: persistence.fetch(),
-      todoQuantity: 0
+      todoQuantity: 0,
+      selectedFilter: 'all'
     }
   },
   methods: {
